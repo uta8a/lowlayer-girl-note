@@ -2,14 +2,19 @@
 .global main
 
 main:
-  mov rcx, 0x0
+  mov rcx, 0x10
+loop:
   mov rdx, 0x9
   lea rsi, [fizzbuzz]
   mov rdi, 0x1
   mov rax, 0x1
+  push rcx
   syscall
-  inc rcx
-  jmp main
+  pop rcx
+  dec rcx
+  jz exit
+  jmp loop
+exit:
   mov rax, 0x3c
   syscall
 
