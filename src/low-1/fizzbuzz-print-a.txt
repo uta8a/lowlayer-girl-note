@@ -1,0 +1,18 @@
+
+fizzbuzz.bin:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000401000 <main>:
+  401000:	48 c7 c2 01 00 00 00 	mov    rdx,0x1
+  401007:	48 8d 34 25 28 10 40 	lea    rsi,ds:0x401028
+  40100e:	00 
+  40100f:	48 c7 c7 01 00 00 00 	mov    rdi,0x1
+  401016:	48 c7 c0 01 00 00 00 	mov    rax,0x1
+  40101d:	0f 05                	syscall 
+  40101f:	48 c7 c0 3c 00 00 00 	mov    rax,0x3c
+  401026:	0f 05                	syscall 
+
+0000000000401028 <string>:
+  401028:	61                   	(bad)  
