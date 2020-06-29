@@ -227,5 +227,10 @@ vagrant@vagrant:~/src/low-1$ echo $?
 - 28:18 @d0iasm: `beq`
   - レジスタrs1, rs2が等しいか見る
   - [ref](https://content.riscv.org/wp-content/uploads/2017/05/riscv-spec-v2.2.pdf) p.17 Conditional Branches
+- 29:34 @hikalium: "デクリメントのときに、条件フラグがセットされるから、それで動く"
+  - レジスタの種類によらず、0になったレジスタが直前の命令でできたらフラグがセットされる
+- 31:45 syscallが使っているレジスタ
+  - 呼び出し規約によって、破壊していいレジスタと保存すべきレジスタが定義されていて、rcxは破壊されていいことになっているのでは？ つまり、毎回ループごとにrcxはsyscallによって別の値に書き換えられており、いつまでも`0`にはならないのではということ。
+- 32:51 fizzbuzzの固定回数回表示に成功
 - 
 
