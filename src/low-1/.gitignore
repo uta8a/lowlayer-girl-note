@@ -1,2 +1,6 @@
+exit-zero
+exit-zero-static
 test-exit
 test-return
+fizzbuzz.o
+fizzbuzz.bin
