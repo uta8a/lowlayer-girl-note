@@ -1,3 +1,5 @@
+.intel_syntax noprefix
+.global main
 main:
-  mov rax, 
+  mov rax, 0x3c
   syscall
