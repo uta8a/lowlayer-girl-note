@@ -4,6 +4,7 @@
 main:
   mov rcx, 0x1
 loop:
+  # fizzbuzz
   # 答え->rax 余り-> rdx
   # 割られる数 rdx,rax (rdxが上位に来て128bit)
   # div <reg>
