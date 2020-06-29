@@ -232,5 +232,16 @@ vagrant@vagrant:~/src/low-1$ echo $?
 - 31:45 syscallが使っているレジスタ
   - 呼び出し規約によって、破壊していいレジスタと保存すべきレジスタが定義されていて、rcxは破壊されていいことになっているのでは？ つまり、毎回ループごとにrcxはsyscallによって別の値に書き換えられており、いつまでも`0`にはならないのではということ。
 - 32:51 fizzbuzzの固定回数回表示に成功
-- 
+  - stackに積んでsyscall後に戻すことで保存する
+- 34:50 @hikalium: div命令
+  - ref. 
+- 41:00 @hikalium: 割り算の結果のフラグはundefined
+  - ref.
+- 41:33 @hikalium: jeとjmpは中の命令コードは同じ
+  - ref.
+- `ls -alh`
+  - 1.1K
 
+# 自分でやってみた
+- fizzbuzz, fizz, buzzの3種類用意したので長くなった。
+- fizzbuzz.binの大きさは5K byteくらい。
